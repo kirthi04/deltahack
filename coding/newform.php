@@ -28,7 +28,7 @@
 <?php
 session_start();
  
-require 'C:\Users\Kiruthiga Selvam\hackerearthapi\Hackerearth-SDK-PHP-master\sdk\index.php';
+require 'Hackerearth-SDK-PHP-master\sdk\index.php';
 
 if (isset($_POST['submit']) ) {
     $_SESSION['langused'] = $_POST['langcategory'];
@@ -40,7 +40,7 @@ fwrite($myfile, $txt);
 
 fclose($myfile);
 $hackerearth = Array(
-		'client_secret' => 'b3a6181bbd181f2d90e78f8c7a1aefe108c50b5e', 
+		'client_secret' => '', 
         'time_limit' => '5',  
         'memory_limit' => '262144'  
 	);
@@ -49,7 +49,7 @@ $custominput = $_SESSION['cinput'];
 $config = Array();
 $config['time']='5';	 	
 $config['memory']='262144'; 
-$config['file']='C:\wamp64\www\coding\codefile.txt';			
+$config['file']='codefile.txt';			
 $config['input']=$custominput;     
 $config['language']= $compilelang;  
 						 
